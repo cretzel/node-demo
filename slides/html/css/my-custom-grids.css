@@ -1,0 +1,25 @@
+h1.title {
+font-size:58px;
+margin-left:0px;
+margin-bottom:20px;
+}
+.slide {
+}
+.slide h3 {
+font-size:48px;
+color:#ff8700;
+margin-bottom:30px;
+}
+
+.slide li {
+font-size:36px;
+padding-left:20px;
+}
+.code pre {
+margin-top:0px;
+padding:10px;
+font-size:24px;
+}
+.bordered.code {
+margin-bottom:20px;
+}

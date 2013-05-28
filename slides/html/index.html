@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Node.js Demo</title>
+
+	<!-- Mobile viewport optimisation -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- (en) Add your meta data here -->
+	<!-- (de) Fuegen Sie hier ihre Meta-Daten ein -->
+
+	<link href="./css/custom-grids.css" rel="stylesheet" type="text/css"/>
+	<link href="./css/my-custom-grids.css" rel="stylesheet" type="text/css"/>
+	<!--[if lte IE 7]>
+	<link href="../yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="../lib/jquery-1.7.1.min.js"></script>
+	<script src="../docs/assets/js/jquery.gridbuilder.js"></script>
+	<script type="text/javascript">
+		var slide=1;
+                if (window.location.hash) {
+                  slide = parseInt(window.location.hash.substring(1));
+                }
+		function loadSlide() {
+                    console.log("slide " + slide);
+		  $(".slide").fadeToggle(500, function() {
+		    $(this).load("slide-" + slide + ".html", function() {
+		       $(this).fadeToggle(500);
+		    })
+                  });
+		  window.location.hash="#"+slide;
+
+		}
+
+                $(document).ready(function() {
+		  $("#main").click(function() {
+		    slide=slide+1;
+                    loadSlide();
+		  });
+		  $(".prev").click(function() {
+		    slide=slide-1;
+                    loadSlide();
+		  });
+		  loadSlide();
+		});
+	</script>
+</head>
+<body>
+
+                <div class="prev" style="float:right;">Prev</div>
+<div id="main">
+	<div class="ym-wrapper">
+	       
+		<h1 class="ym-gbox title">Node.js Demo</h1>
+
+
+
+		<div class="ym-grid linearize-level-1">
+
+		  <div class="slide">
+
+		  </div>
+
+
+		</div>
+</div>
+
+</div>
+
+</body>
+</html>
