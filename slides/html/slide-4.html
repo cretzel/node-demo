@@ -1,7 +1,0 @@
-<h3>Event-driven asynchronous callbacks</h3>
-
-<ul>
-<li>Many client connections can be handled concurrently.</li>
-<li> Node tells the operating system (through epoll, kqueue, /dev/poll, or select) that it should be notified when a new connection is made, and then it goes to sleep.</li>
-<li> If someone new connects, then it executes the callback. Each connection is only a small heap allocation.</li>
-</ul>
