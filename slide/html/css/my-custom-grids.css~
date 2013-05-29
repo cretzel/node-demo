@@ -1,0 +1,16 @@
+h1.title {
+font-size:58px;
+margin-left:0px;
+margin-bottom:20px;
+}
+.slide {
+}
+.slide h3 {
+font-size:48px;
+color:#ff8700;
+}
+
+.slide li {
+font-size:36px;
+padding-left:20px;
+}
